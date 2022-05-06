@@ -1,6 +1,6 @@
 # Roman Perun begins an acquaintance with React.
 
-This is the first React app where I will learn all the necessary React concept.
+This is the first React app where I will learn all the necessary React concepts.
 
 # Getting Started with Create React App
 
