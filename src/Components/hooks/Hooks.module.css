@@ -1,0 +1,41 @@
+.item {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+  align-items: center;
+}
+
+.item label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.button {
+  background-color: rgba(19, 195, 98, 0.429);
+  margin-right: 0.5rem;
+  margin-left: 11rem;
+}
+
+.button:hover,
+  .button:active {
+    background: #118811;
+    border-color: #741188;
+  }
+
+.item input {
+  font: inherit;
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+  
+.item input:focus {
+  outline: none;
+  border-color: #4f005f;
+}
