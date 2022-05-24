@@ -19,6 +19,9 @@ function MainNavigation() {
             <Link to="/hooks">Hooks</Link>
           </li>
           <li>
+            <Link to="/pokemons">Pokemons</Link>
+          </li>
+          <li>
             <Link to="/refs">Refs</Link>
           </li>
         </ul>
