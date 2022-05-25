@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Layout from './Components/layout/Layout';
 import Hocs from './Pages/Hocs';
 import Refs from './Pages/Refs';
+import Pokemons from './Pages/Pokemons';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route path="/hooks">
           <Hooks />
+        </Route>
+        <Route path="/pokemons">
+          <Pokemons />
         </Route>
         <Route path="/refs">
           <Refs />
