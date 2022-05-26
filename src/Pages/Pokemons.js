@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import WithLoading from '../Components/hocs/Loading';
 import PokemonsList from '../Components/pokemons/PokemonsList';
 
@@ -9,21 +9,28 @@ const Pokemons = () => {
   const [pokemon, setPokemon] = useState([]);
   const [limit, setLimit] = useState('');
 
+  useEffect(() => {
+    if (limit) {
+      getAllPokemons();
+    }
+  }, [limit]);
+
+  const getAllPokemons = () => {
+    setIsLoading(true);
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setTimeout(() => {
+          setIsLoading(false);
+          setPokemon(res.results.map((p) => p));
+        }, 1500);
+      });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const getAllPokemons = () => {
-      setIsLoading(true);
-      fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`)
-        .then((res) => {
-          return res.json();
-        })
-        .then((res) => {
-          setTimeout(() => {
-            setIsLoading(false);
-            setPokemon(res.results.map((p) => p));
-          }, 1500);
-        });
-    };
     getAllPokemons();
   };
 
